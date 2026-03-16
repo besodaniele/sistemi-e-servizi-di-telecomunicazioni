@@ -614,4 +614,127 @@ I doppini formano la base delle reti telefoniche e ADSL/VDSL.
 Molto spesso i cavi utilizzati per questi scopi sono vecchi e non possono essere classificati in una delle categorie citate precedentemente.
 La velocità di trasmissione in questi contesti è molto variabile.
 \subsection{Fibre ottiche}
+Una fibra ottica è una fibra molto sottile, tipicamente fatta di fibre di silicio (vetro).
+Può propagare segnale ottico su bande near-infrared con attenuazione molto bassa.
+La propagazione è basata sul principio di riflessione totale interna.
+Una piccola anima di vetro che viene avvolta da un rivestimento con indice di rifrazione più basso, in modo che la luce rimanga confinata all'interno dell'anima e possa propagarsi su lunghe distanze senza perdite significative.
+La banda teorica media è molto alta (>100 Ghz).
+Le fibre ottiche sono utilizzate principalmente nelle dorsali di rete, nelle connessioni a lunga distanza e nelle reti locali ad alta velocità.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pictures/1/fiber-optic-cable-types-signal-indexing-01-304461175.png}
+	\caption{Rappresentazione semplificata di una fibra ottica}
+	\label{fig:optic}
+\end{figure} \noindent
+Come mostrato in figura \ref{fig:optic}, ci sono più tipi di fibre ottiche, che si distinguono principalmente in base alla modalità di propagazione della luce:
+\begin{itemize}
+	\item \textbf{Single-mode}: la luce si propaga lungo un unico percorso, consentendo trasmissioni a lunga distanza con bassa attenuazione e alta capacità.
+	\item \textbf{Multi-mode}: la luce si propaga lungo più percorsi, adatta per distanze più brevi e con capacità inferiore rispetto alla single-mode.
+\end{itemize}
+\subsection{Mezzi radio}
+I mezzi radio utilizzano onde elettromagnetiche per trasmettere segnali attraverso l'aria. 
+Ci sono diverse applicazioni dei mezzi radio, tra cui:
+\begin{itemize}
+	\item \textbf{Wirelless Local Area Networks (WLAN) e Fixed Wireless Access (FWA)}: 
+	\begin{itemize}
+		\item utilizzano frequenze come 2.4 GHz e 5 GHz (bande libere).
+		\item Soffrono di interferenze da altri dispositivi che utilizzano le stesse frequenze (e.g., microonde, Bluetooth).
+		\item A 5Hz attenuazioni più elevate, ma maggiore capacità.
+	\end{itemize}
+	\item \textbf{Cellular Networks (2G, 3G, 4G, 5G)}:
+	\begin{itemize}
+		\item 700 MHz - 2.6 GHz (bande assegnate).
+		\item Con poca potenza emessa possibile coprire grandi distanze superando ostacoli fisici.
+	\end{itemize}
+	\item \textbf{Reti satellitari}:
+	\begin{itemize}
+		\item 3-30 GHz (bande assegnate).
+		\item Banda molto ampia ma forte attenuazione a causa di distanza e condizioni atmosferiche.
+	\end{itemize}
+\end{itemize}
+\subsubsection{Antenne}
+Le antenne sono conduttore che permettono di:
+\begin{itemize}
+	\item Irradiare energia elettromagnetica nello spazio (trasmissione).
+	\item Ricevere energia elettromagnetica dallo spazio (ricezione).
+\end{itemize}
+Le antenne possono essere usate per entrambi gli scopi.
+Le antenne si distinguono in base alla loro direttività, che indica la capacità di concentrare l'energia in una direzione specifica:
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}
+	\item \textbf{Uniformemente in tutte le direzioni}: radiatore isotropico, ideale ma non realizzabile, utilizzato come riferimento per misurare la direttività di altre antenne.
+	\item \textbf{In maniera direzionale}
+	\begin{itemize}
+		\item \textbf{Omnidirezionali}: irradiano energia in tutte le direzioni, adatte per comunicazioni locali e mobili.
+		\item \textbf{Direttive}: irradiano energia in una direzione specifica, adatte per comunicazioni a lunga distanza e point-to-point.
+	\end{itemize}
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pictures/1/antennas.png}
+\end{figure}
+\end{minipage}
+\subsubsection{Antenne direzionali}
+I terminali mobili utilizzano antenne omnidirezionali, mentre le stazioni base utilizzano antenne direttive per coprire aree specifiche.
+Le antenne direttive sono progettate per concentrare l'energia in una direzione specifica, coprendo un certo settore (infatti vengono anche chiamate antenne settorizzate).
+I collegamenti point-to-point e le stazioni terrestri per satelliti utilizzano antenne paraboliche progettate per ricevere/trasmettere segnali in un settore molto stretto.
+\subsubsection{Canali broadcast}
+Le trasmissioni radio sono inerentemente broadcast, dunque le risorse radio vengono condivise dagli utenti.
+Tipicamente viene utilizzata un'architettura centralizzata, i dispositivi possono comunicare solamente tramite un nodo di accesso wireless (coordinatore), ma non tra loro.
+\subsubsection{Ostacoli nella trasmissione radio}
+I segnali che possono propagarsi in un medium wireless sono soggetti a due tipi di ostacoli:
+\begin{itemize}
+	\item Attenuazione a causa della distanza.
+	\item Variazioni di caratteristiche del canale nel tempo.
+\end{itemize}
+L'attenuazione nello spazio libero è dato dalla formula $P_r = P_t \cdot \left( \frac{\lambda}{4\pi d} \right)^2$, dove $P_r$ è la potenza ricevuta, $P_t$ è la potenza trasmessa, $\lambda$ è la lunghezza d'onda e $d$ è la distanza tra trasmettitore e ricevitore.
+Altri tipi di attenuazioni possono essere causate da ostacoli fisici o dall'atmosfera (in base alla frequenza):
+\\
+\begin{minipage}{0.5\textwidth}\begin{itemize}
+	\item Riflessioni
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{pictures/1/reflection.png}
+	\end{figure}
+	\item Shadowing
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{pictures/1/shadowing.png}
+	\end{figure}
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}
+		\item Diffrazione
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{pictures/1/diffraction.png}
+		\end{figure}
+		\item Scattering
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{pictures/1/scattering.png}
+		\end{figure}
+	\end{itemize}
+\end{minipage}
+I fenomeni presentati portano a due fenomeni:
+\begin{itemize}
+	\item \textbf{Multi-path fading}: nella propagazione tra il trasmittente e il ricevente il segnale può seguire strade diverse a causa della riflessione totale su piccoli oggetti.
+	Il segnale può essere amplificato o attenuato (interferenza costruttiva o distruttiva).
+	Di conseguenza, il segnale cambia molto e all'improvviso nel tempo.
+	\item \textbf{Shadow fading}: fading che varia lentamente nel tempo quando dei grandi oggetti modificano le componenti del segnale.
+\end{itemize}
+Per mitigare questi fenomeni è possibile controllare la potenza del segnale e usare modulazione/codifiche adattive.
+A causa dei fenomeni descritti, c'è una relazione inversa tra la copertura del segnale e la sua frequenza.
+Di conseguenza più antenne sono necessarie per coprire la stessa area a frequenze più alte.
+\subsubsection{Multiplexing e accesso multiplo nei mezzi radio}
+Nella direzione di downlink viene utilizzato il multiplexing, dove ho una stazione di trasmissione e diversi riceventi.
+Nella direzione di uplink viene utilizzato l'accesso multiplo, dove ho diverse stazioni di trasmissione e una stazione di ricezione (nodo di accesso o base station).
+Se voglio separare downlink e upling sullo stesso medium di trasmissione, posso utilizzare tecniche di duplexing:
+\begin{itemize}
+	\item \textbf{Frequency Division Duplexing (FDD)}: utilizzo frequenze diverse per downlink e uplink (come FDM).
+	\item \textbf{Time Division Duplexing (TDD)}: utilizzo lo stesso canale ma in momenti diversi per downlink e uplink (come TDM).
+\end{itemize}
+\subsubsection{Multiple Input Multiple Output (MIMO)}
+Le antenne MIMO sfruttano il multiplexing spaziale per aumentare la capacità del canale wireless, oppure ridurre l'effetto del fading o del rumore.
+Lo stesso dato viene trasmesso su più antenne, e il ricevitore utilizza tecniche di combinazione per migliorare la qualità del segnale ricevuto.
+In particolare il 5g utilizza una tecnica chiamata Massive MIMO, che vedremo più avanti.
