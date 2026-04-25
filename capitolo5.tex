@@ -1,0 +1,40 @@
+Il \textbf{QoS (quality of service)} è un indicatore di qualità utilizzato per misurare il livello del serviziom, confrontandolo alle aspettative dell'utente.
+Il QoS viene associato ai servizi di rete e i flussi generati da essi.
+Può essere definito in termini di misure di prestazioni:
+\begin{itemize}
+	\item Banda disponibile
+	\item Ritardo
+	\item Perdita di pacchetti
+	\item Probabilità di blocking
+	\item Ritardo di setup
+	\item \ldots
+\end{itemize}
+Il QoE (quality of experience) è legato al QoS, ma mentre QoS è un indicatore oggettivo, il QoE è un indicatore soggettivo, che dipende dalle aspettative dell'utente.
+Possiamo definire un QoS in termini:
+\begin{itemize}
+	\item \textbf{Assoluti}: definiamo dei parametri numerici che devono essere rispettati, ad esempio: ritardo $< 100$ ms, banda $> 1$ Mbps, \ldots
+	\item \textbf{Relativi}: definiamo come il traffico o classe di servizi viene trattato rispetto ad altri.
+\end{itemize}
+Ricordiamoci che le reti IP sono \textbf{best effort}, quindi non garantiscono alcun QoS.
+Le reti best effort hanno successo perché sono semplici, ma negli ultimi anni il bisogno di garanzie di qualità in reti IP è aumentato molto. 
+Questo fenomeno ha portato la creazione di numerose nuove soluzioni per garantire la qualità (ad esempio: IntServ, DiffServ, MPLS, \ldots).
+Un altro aspetto fondamentale del traffico su reti IP è che è \textbf{bursty}, ovvero ha periodi di alta attività seguiti da periodi di bassa attività.
+\\
+Possiamo definire almeno due classi di servizi:
+\begin{itemize}
+	\item \textbf{Servizi real time}: molto sensibili al ritardo, ma non alla perdita di pacchetti, ad esempio: VoIP, video streaming, \ldots
+	\item \textbf{Servizi elastici}: molto sensibili alle perdite di pacchetti, ma non al ritardo. Tendenzialmente richiedono ACK per verificare la corretta ricezione dei pacchetti, ad esempio: email, file transfer, \ldots
+\end{itemize}
+I diversi tipi di servizi richiedono diversi livelli di QoS, e quindi è necessario implementare meccanismi per garantire questi livelli di qualità.
+\section{Metodi per la garanzia di QoS}
+Per poter garantire il QoS, è necessario implementare almeno un sottoinsieme dei seguenti meccanismi:
+\begin{enumerate}
+	\item Identificazione del flusso/traffico (etichette)
+	\item Progettazione del traffico per stabilire cammini desiderati nella rete (MPLS).
+	\item Call admission control (CAC), meccanismi che possono rifiutare una richiesta se non ci sono sufficienti risorse o non è possibile garantire il QoS richiesto per gli altri servizi.
+	\item Network resource signalling, meccanismi che permettono di comunicare alla rete le risorse necessarie per un certo servizio. Utili per prendere buone decisioni in CAC.
+	\item Meccanismi di regolazione del traffico: si assicurano per il traffico ammesso rispetti gli accordi e non sovraccarichi la rete.
+	In caso ciò non valesse, vengono prese delle contromisure.
+	\item Tecniche di scheduling per prioritizzare il traffico all'interno dei dispositivi di rete.
+	\item Over-provisioning, ovvero fornire più risorse di quelle necessarie per garantire il QoS, in modo da avere un margine di sicurezza.
+\end{enumerate}
