@@ -129,3 +129,17 @@ A questo scopo, una nuova interfaccia (SG interface) è stata definita tra MME e
 LTE permette solo chiamate tramite VoLTE (VoIP), ma le chiamate su reti a commutazione di circuito sono ancora possibili tramite la procedura di fallback.
 Un UE viene informato di una chiamata in arrivo da una rete a commutazione di circuito tramite il paging LTE, dopodiché esegue la chiamata usando la rete 2G/3G.
 Il signaling tra le due reti avviene tramite l'interfaccia SG.
+\section{Virtualizzazione}
+Il cambio maggiore nell'evoluzione da 2G a 4G riguarda due aspetti principali
+\begin{itemize}
+	\item soluzione all-ip
+	\item separazione tra piano di controllo e piano dati, con cammini ottimizzati per il piano dati (flat network)
+\end{itemize}
+Da qui, è nata l'idea di virtualizzare le funzioni del piano di controllo, in modo da avere costi più bassi e flessibilità maggiore.
+Prende vita il concetto di \textbf{virtual EPC (vEPC)}, che è il paradigma di virtualizzazione utilizzato.
+Attualmente il trend è quello di separare le funzioni su tutti i nodi della EPC
+\begin{itemize}
+	\item PGW divisa in PGW-C (control) e PGW-U (user)
+	\item SGW divisa in SGW-C (control) e SGW-U (user)
+\end{itemize}
+SGW-C, PGW-C, MME e HSS possono essere virtualizzate (vEPC), potenzialmente spostandole nel cloud. La virtualizzazione è particolarmente importante nelle reti 5G.
