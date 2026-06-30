@@ -177,11 +177,31 @@ Dividiamo in fasi:
 	\item La MS risponde al messaggio di paging e inizia una procedura di accesso (RACH/AGCH) e ottiene un SDCCH.
 	\item LA MS inizia l'autenticazione e la procedura di cifratura per l'assegnamento di un TCH, in modo che si possa stabilire la chiamata.
 \end{enumerate}
-\subsection{Roaming}
+\subsection{Chiamata ricevuta da MS in roaming}
 Ora possiamo analizzare il caso in cui la chiamata preveda il roaming.
 % rivedere lezione per capire significato diagrammi
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/9/roaming1.png}
+	\caption{Caso 1}
+\end{figure}\noindent
+Nel caso 1 l'utente italiano si trova in roaming negli Stati Uniti.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/9/roaming2.png}
+	\caption{Caso 2}
+\end{figure}\noindent
+Nel caso 2 l'utente americano vuole chiamare un utente italiano che si trova in roaming negli Stati Uniti. Notare che fino al punto 3 si assume che il chiamato sia in Italia, e quindi il GMSC della rete italiana viene contattato. In realtà, il GMSC della rete italiana non sa dove si trova l'utente, quindi interroga l'HLR per ottenere la posizione attuale. L'HLR risponde con il VLR attualmente visitato dalla MS, che si trova negli Stati Uniti. Allora il GMSC italiano inoltra la chiamata al MSC americano. N.B. in questa comunicazione vengono trasmessi sia dati che signaling, instaurando un circuito, questo è molto inefficiente. In questo caso l'utente americano paga la chiamata internazionale, sia per il flusso di dati che per il signaling!
+
 \subsection{Mobile number portability}
 % aggiungere spiegazione dalla videolezione
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/9/roaming3.png}
+	\caption{Mobile number portability}
+\end{figure}\noindent
+Si è cercato di risolvere il problema della inefficienza di trasportare sia i dati che il signaling sulla stessa strada, introducendo il Mobile Number Portability. Naturalmente, noi sappiamo che è possibile cambiare operatore mantenendo lo stesso numero di telefono, questo è possibile distinguendo tra Donor Radio Network e Recipient Radio Network. Il Donor Radio Network è la rete originale a cui apparteneva l'utente, mentre la Recipient Radio Network è la rete a cui l'utente si è spostato. Quando il GMSC della donor riceve una chiamata per l'utente, il GMSC interroga il number portability DB con un messaggio di Get MSRN, questo viene inoltrato al GMSC della recipient che risponde. Queste interrogazioni avvengono su un flusso di solo signaling.
+Dopodiché il GMSC della donor riceve la risposta, instaura il circuito tra chiamante e MSC della recipient, in cui verranno trasportati solo i dati.
 \section{Handover}
 La procedura viene iniziata dalla rete, ma è basata su misurazioni effettuate dalla MS (network-initiated mobile-assisted handover).
 Nella mobilità attiva, l'MS scansiona i canali di controllo per ottenere informazioni sulla potenza del segnale da vari BTS, dopodiché le invia tramite SACCH.
