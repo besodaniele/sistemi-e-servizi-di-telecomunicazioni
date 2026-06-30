@@ -134,7 +134,7 @@ In forma matriciale, possiamo scrivere:
 	\vec{r} &= T \vec{s}\\
 	T&=\begin{bmatrix}1 & k_1 \\ k_2 & 1 \end{bmatrix}
 \end{align*}
-Trasmettendo il segnale $\vec{s}\phantom{.} ^*= T^{-1} \vec{s}$ (preconding) il segnale desiderato $\vec{s}$ viene ricevuto senza interferenze:
+Trasmettendo il segnale $\vec{s}\phantom{.} ^*= T^{-1} \vec{s}$ (precoding) il segnale desiderato $\vec{s}$ viene ricevuto senza interferenze:
 \begin{align*}
 	\vec{r} &= T \vec{s}\phantom{.} ^* = T T^{-1} \vec{s} = \vec{s}
 \end{align*}
@@ -184,6 +184,7 @@ per i fornitori di servizi, poiché è necessario installare un mini DSLAM per o
 \subsection{Fiber to the home (FTTH)}
 In questa soluzione, la fibra ottica raggiunge direttamente la casa dell'utente, eliminando l'utilizzo del rame.
 Ci sono due principali architetture di rete utilizzate in FTTH: PON (Passive Optical Network) e Point-to-Point (P2P).
+\subsubsection{P2P}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{pictures/2/FTTH_P2P.png}
@@ -191,6 +192,8 @@ Ci sono due principali architetture di rete utilizzate in FTTH: PON (Passive Opt
 \end{figure}\noindent
 Nell'architettura P2P, ogni utente ha una connessione dedicata in fibra ottica fino alla centrale, offrendo prestazioni elevate ma a costi più elevati dato l'elevata quantità di cavi necessaria.\
 Il multiplexing/demultiplexing viene effettuato al MPoP (Metropolitan Point of Presence). Viene adottata principalmente come soluzione business (anche se spesso in realtà per questi utilizzatori si utilizza comunque la PON).
+\subsubsection{PON}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{pictures/2/FTTH_PON.png}
