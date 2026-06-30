@@ -84,7 +84,7 @@ un label è composto da 4 campi:
 Le label vengono quindi usate dai router per fare forwarding dei pacchetti tramite label swapping.
 Quando un pacchetto arriva sostituisce la in-label con una out-label, e inoltra alla interfaccia associata alla out-label.
 L'associazione label-interfaccia è definita da una tabella di forwarding.
-Così facendo, si crea un circuito virtuale tra la sorgetente e la destionazione (provider edge routers).
+Così facendo, si crea un circuito virtuale tra la sorgente e la destinazione (provider edge routers).
 Le label hanno un significato locale, quindi possono essere riusate in diverse parti della rete.
 In realtà, la nomenclatura più specifica per queste componenti è:
 \begin{itemize}
@@ -167,7 +167,7 @@ Di conseguenza, gli LSP possono essere creati in modo da soddisfare specifici re
 \begin{itemize}
 	\item Coordinare la distribuzione di label.
 	\item Creare i percorsi desiderati.
-	\item Prenotare, rilasciare e riallocare risorse.
+	\item Prenotare, rilasciare e ri-allocare risorse.
 	\item Evitare cicli.
 \end{itemize}
 Ci sono tre possibili meccanismi di signaling:
@@ -203,7 +203,7 @@ Ovviamente, è possibile creare schemi di backup 1:1 o 1:N, a seconda delle esig
 Con questi sistemi è possibile creare sistemi di recupero dai fallimenti con tempi inferiori di diversi ordini di grandezza rispetto a quelli ottenibili con il routing IP.
 \section{Virtual private networks (VPN)}
 Le vpn sono una estensione geografica di reti private, costruite come overlay su una rete pubblica, tipicamente internet o reti MPLS di ISP.
-Lo spazio di indirizzamente è quindi condiviso tra i vari siti.
+Lo spazio di indirizzamento è quindi condiviso tra i vari siti.
 Ci sono tre categorie principali di vpn:
 \begin{itemize}
 	\item \textbf{Trusted VPN}:tipicamente gestite da un ISP (anche per aspetti di sicurezza). I cammini di rete possono essere forzati (quality of service). Non c'è cifratura.

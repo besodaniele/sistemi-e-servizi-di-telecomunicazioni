@@ -1,4 +1,4 @@
-L'obbiettivo di tutte le evoluzioni delle reti mobili è quello di migliorare le perfomance in termini di velocità.
+L'obbiettivo di tutte le evoluzioni delle reti mobili è quello di migliorare le performance in termini di velocità.
 Il 5G invece, si concentra su latenza, affidabilità, numero di utenti e consumo energetico.
 \begin{figure}[H]
 	\centering
@@ -50,7 +50,7 @@ Quindi, le mmWave sono usate per permettere lo \textbf{small cell access}, dove 
 Se queste celle vengono distribuite in modo denso, si può avere velocità di diversi Gbps.
 \section{Massive MIMO}
 Concettualmente si vuole equipaggiare le base station con array di molte antenne, in modo da servire molti utenti contemporaneamente sulla stessa banda.
-Con l'uso del \textbf{ultra-widebeamforming}(gestione del segnale radio che permette di direzionare i segnali wireless) è possibile "seguire" l'utente che deve essere servito.
+Con l'uso del \textbf{ultra-wide beam forming}(gestione del segnale radio che permette di direzionare i segnali wireless) è possibile "seguire" l'utente che deve essere servito.
 \section{Architettura}
 5G impiega un'architettura dove la maggiorparte degli elementi può essere virtualizzata e posizionata di una infrastruttura cloud.
 Per una rete completamente flat, viene effettuata una completa separazione tra piano di controllo (CUPS) e piano dati, con un'architettura basata su SDN.
@@ -90,8 +90,8 @@ Ora presentiamo le funzionalità sul piano di controllo e il confronto con la lo
 	\item \textbf{Authentication Server Function (AUSF)}: gestisce l'autenticazione degli utenti. Corrisponde alle funzionalità di HSS in EPC.
 	\item \textbf{Unified Data Management (DUM)}: repository delle informazioni degli utenti iscritti, usato da più funzioni. Analogo a HSS in EPC, ma non effettua autenticazione.
 	\item \textbf{Network Repository Function (NRF)}: mantiene informazioni sulle funzioni di rete disponibili. Supporta un meccanismo di discovery per le funzioni.
-	\item \textbf{Network Exposure Function (NEF)}: espone in modo sicuro i servizi offerti dalla rete 5g agli utenti (loggin, analitiche, etc.). Espone delle API.
-	\item \textbf{NEtwork Slice Selection Funciton (NSSF)}: seleziona la corretta Network Slice Instance (NSI) basandosi sulle informazioni ottenute durante il processo di attach. Redirige quindi il traffico verso la corretta slice.
+	\item \textbf{Network Exposure Function (NEF)}: espone in modo sicuro i servizi offerti dalla rete 5g agli utenti (logging, analitiche, etc.). Espone delle API.
+	\item \textbf{Network Slice Selection Function (NSSF)}: seleziona la corretta Network Slice Instance (NSI) basandosi sulle informazioni ottenute durante il processo di attach. Redirige quindi il traffico verso la corretta slice.
 \end{itemize}
 Per quanto riguarda il piano utenti \textbf{User plane Function (UPF)} è responsabile per il routing dei pacchetti e il forwarding tra RAN e reti esterne. Inoltre, mantiene i QoS. Equivale alle funzionalità del piano utenti di PGW e SGW  
 \begin{figure}
@@ -110,7 +110,7 @@ Ci sono due possibili approcci per la transizione da 4G a 5G immaginati da 3GPP:
 	\item Standalone (SA): utilizzo della rete 5G (NG-RAN e 5G-Core) da zero, tenendo separato il 4G.
 	\item Non-Standalone (NSA): I nuovi gNB vengono connessi agli EPC 4G (NG-RAN e 4G EPC), la rete core viene evoluta in maniera incrementale verso il 5G-Core.
 \end{itemize}
-Attualmente la maggiorparte dei deploy è basata su NSA. Gli operatori italiani offrono una vasta copertura 5G, concentrandosi principalmente sul garantire alte velocità.
+Attualmente la maggior parte dei deploy è basata su NSA. Gli operatori italiani offrono una vasta copertura 5G, concentrandosi principalmente sul garantire alte velocità.
 Viene posta poca attenzione verso la latenza e nessun reale interesse nelle densificazione delle celle (small cells, mmWave), che è invece fondamentale per sfruttare appieno le potenzialità del 5G. Al momento non siamo ancora pronti a un deploy completo del 5G, specialmente in Europa. Questo avviene perché a causa dei costi elevati mole funzionalità non verrebbero implementate e l'investimento nelle infrastrutture necessarie è enorme. Per risolvere quest'ultimo problema diversi operatori stanno valutando l'uso d' infrastrutture condivise, sfruttando la virtualizzazione.
 \section{Riassunto delle innovazioni}
 L'evoluzione portata dal 5G si basa su tre pilastri:

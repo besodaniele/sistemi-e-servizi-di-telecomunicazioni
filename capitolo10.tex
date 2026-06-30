@@ -1,7 +1,7 @@
 UMTS (Universal Mobile Telecommunications System) è stata la prima tecnologia 3G. 
 La novità principale rispetto al GSM è nella RAN, dove viene introdotta una nuova interfaccia CDMA (Code Division Multiple Access) e il soft handover.
 La core network è molto simile a quella del GSM/GPRS, sia in termini di funzionalità che di procedure di signaling.
-Inoltre, viene introdotto il ocncetto di bearer service.
+Inoltre, viene introdotto il concetto di bearer service.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{pictures/10/architettura.png}
@@ -40,15 +40,15 @@ Possono essere definite diverse classi di service in base al QoS richiesto, ad e
 	\item Interactive
 	\item Background
 \end{itemize}
-\begin{figure}[H]MC Zoom 35-70mm f/3.5-4.5 manual
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{pictures/10/classi.png}
 	\caption{Classi di bearer service}
 \end{figure}
 Gli attributi di QoS usati per specificare un bearer service sono:
 \begin{itemize}
-	\item Beatrate massimo
-	\item Beatrate minimo garantito
+	\item Bitrate massimo
+	\item Bitrate minimo garantito
 	\item Delay massimo
 	\item Probabilità di errore
 \end{itemize}
@@ -56,7 +56,7 @@ Gli attributi utilizzati dipendono dalla service class, dato che non tutti devon
 \bigskip
 Ci sono diversi servizi che coinvolgono diversi nodi:
 \begin{itemize}
-	\item Core Network (CN) bearer service: tra i noti della core network (SGSN e GGSN)
+	\item Core Network (CN) bearer service: tra i nodi della core network (SGSN e GGSN)
 	\item Radio Access Bearer (RAB) service: tra UE e SGSN
 	\item Radio Bearer Service: tra UE e RNC
 \end{itemize}

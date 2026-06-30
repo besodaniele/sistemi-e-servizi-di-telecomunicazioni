@@ -18,7 +18,7 @@ Nel secondo e terzo tipo deve essere garantita la possibilità di interconnessio
 \subsection{VoIP-VoIP}
 Si divide a sua volta in:
 \begin{itemize}
-	\item \textbf{VoIP puro}: la comunicazione avviene tra due terminai che supportano nativamente VoIP (ad esempio un pc o telefono VoIP).
+	\item \textbf{VoIP puro}: la comunicazione avviene tra due terminali che supportano nativamente VoIP (ad esempio un pc o telefono VoIP).
 	I pacchetti vocali vengono instradati usando internet sull'intero cammino, bypassando la rete PTSN.
 	\begin{figure}[H]
 		\centering
@@ -47,7 +47,7 @@ Deve essere garantita l'interconnessione tra la rete internet e la rete mobile, 
 \section{Motivazioni dell'adozione del VoIP}
 Una integrazione standardizzata tra IP e la rete telefonica presenta un'opportunità per realizzare un sistema di comunicazione globale.
 L'unica rete per i dati universale è la rete IP, e quindi è naturale che la telefonia si evolva verso l'uso di IP.
-Questa integrazione offre benefizi sia per i consumatori che per i fornitori di servizi, tra cui:
+Questa integrazione offre benefici sia per i consumatori che per i fornitori di servizi, tra cui:
 \begin{itemize}
 	\item \textbf{Per gli operatori}:
 	\begin{itemize}
@@ -74,7 +74,7 @@ Permettono di codificare un segnale con banda $\mathcal{B}$ senza perdite (a men
 Le operazioni da effettuare sono 
 \begin{itemize}
 	\item \textbf{Campionamento}: si campiona il segnale a una frequenza $f_s$ che deve essere almeno $2\mathcal{B}$ (teorema di Nyquist).
-	\item \textbf{Quantizzazione}: si quantizza il segnale campionato, associando a ogni campione un numero. Questa operazioni è irreversibile e introduce un errore di quantizzazione.
+	\item \textbf{Quantizzazione}: si quantizza il segnale campionato, associando a ogni campione un numero. Questa operazione è irreversibile e introduce un errore di quantizzazione.
 	La quantizzazione può essere uniforme o non uniforme.
 \end{itemize}
 \subsubsection{Pulse Code Modulation (PCM)}
@@ -187,7 +187,7 @@ Il ritardo dipende dalla lunghezza dei segmenti e dal loro numero.
 \end{figure}
 \subsection{Ritardo di elaborazione}
 Il dispositivo di elaborazione dei pacchetti (switch, router, ecc\dots) introduce un ritardo di elaborazione.
-Questo ritardo è dato dall'attraverso del piano dati (lookup tabelle e operazioni sui pacchetti).
+Questo ritardo è dato dall'attraversamento del piano dati (lookup tabelle e operazioni sui pacchetti).
 Tendenzialmente è trascurabile, se i router e switch sono ben progettati sono nell'ordine di microsecondi.
 \subsection{Ritardo di queuing}
 \begin{figure}[H]
@@ -233,9 +233,9 @@ Il protocollo utilizzato è il \textbf{Signalling System No. 7 (SS7)}, basato su
 	\caption{Diagramma di sequenza di SS7}
 \end{figure}
 \subsection{Signalling in reti VoIP}
-Nelle reti IP il signalling può essere ridotto in quanto il routing viene effettuato dal protocllo IP, semplicemente è necessario adottare un sistema simile a DNS per risolver i nomi dei terminali in indirizzi IP.
-Quindi, è sufficiente implementare un protocollo per allerare il terminale chiamato, e per negoziare i parametri della chiamata (ad esempio, il codec da utilizzare).
-In realtà, vengono adottare dei protocolli specifici per gestire meglio alcune funzionalità, come ad esempio il controllo di accesso, il controllo di ammissione di chiamata e il carico di costi.
+Nelle reti IP il signalling può essere ridotto in quanto il routing viene effettuato dal protocollo IP, semplicemente è necessario adottare un sistema simile a DNS per risolver i nomi dei terminali in indirizzi IP.
+Quindi, è sufficiente implementare un protocollo per segnalare il terminale chiamato, e per negoziare i parametri della chiamata (ad esempio, il codec da utilizzare).
+In realtà, vengono adottati dei protocolli specifici per gestire meglio alcune funzionalità, come ad esempio il controllo di accesso, il controllo di ammissione di chiamata e il carico di costi.
 Ci sono vari protocolli di segnalazione per VoIP, tra cui:
 \begin{itemize}
 	\item \textbf{Session Initiation Protocol (SIP)}
@@ -416,7 +416,7 @@ Vengono utilizzati due meccanismi per assicurare che richieste adiacenti seguano
 \subsection{Ulteriori metodi}
 Possono essere utilizzati per sospendere, modificare o riattivare il setup di una chiamata quando devono essere effettuate delle azioni prima che possa essere completato.
 \subsubsection{PRACK}
-Provisional ascknowledgement, quando un server dopo aver ricevuto una richiesta manda una risposta conclusiva (2xx), dopodiché aspetta un ACK dal client.
+Provisional acknowledgement, quando un server dopo aver ricevuto una richiesta manda una risposta conclusiva (2xx), dopodiché aspetta un ACK dal client.
 Se l'ACK non arriva, la riposta 2xx viene ritrasmessa. Se l'ACK non viene mandato perché il client deve effettuare altre operazioni, allora viene usato il PRACK.
 \begin{figure}[H]
 	\centering

@@ -1,5 +1,5 @@
 LTE (Long Term Evolution) è la quarta generazione di reti mobili.
-Il sistema è stato riprogettato in modo da abbracciare il paradigma "all-IP", dunque il piano di controllo e il piano utente sono basati su IP e la commutazione di circuito non è più supportata.
+Il sistema è stato ri-progettato in modo da abbracciare il paradigma "all-IP", dunque il piano di controllo e il piano utente sono basati su IP e la commutazione di circuito non è più supportata.
 Viene inoltre introdotto il concetto di \textbf{flat network}, ovvero la rete di accesso radio include un singolo nodo, chiamato eNodeB.
 Il piano dati e di controllo vengono separati, in modo che quello dati sia gestito in modo da attraversare il minor numero di nodi possibile.
 Per aumentare le prestazioni sono stati fatti dei miglioramenti significativi al livello fisico, tra cui Multi-carrier modulation (OFDM/OFDMA), adaptive modulation e coding,
@@ -15,7 +15,7 @@ Ora vediamo i componenti della rete:
 \begin{itemize}
 	\item \textbf{eNodeB}: base station evoluta, offre funzionalità estese.
 	\item \textbf{Packet Data Network Gateway (PGW)}: connette le UE alle reti esterne (entry e exit point per il traffico dati).
-	\item \textbf{Serving Gateway (SGW)}: instrada e inolta i pacchetti dati degli utenti.
+	\item \textbf{Serving Gateway (SGW)}: instrada e inoltra i pacchetti dati degli utenti.
 	\item \textbf{Mobility Management Entity (MME)}: nodo principale del piano di controllo.
 \end{itemize}
 \begin{figure}[H]
@@ -114,7 +114,7 @@ Quando un pacchetto destinato a un UE arriva al PGW, ci sono due possibilità:
 	\item C'è un bearer S1 attivo tra SGW e eNodeB (stato attivo), dunque il pacchetto può essere inviato direttamente all'UE.
 	\item Non c'è un bearer S1 attivo (stato idle).
 	\begin{enumerate}
-		\item Il MME richiede a tutti gli eNodeB l'ultima Tracking Area node per iniziare la procedura di paging.
+		\item Il MME richiede a tutti gli eNodeB l'ultima Tracking Area nota per iniziare la procedura di paging.
 		\item Nel mentre, il pacchetto viene bufferato al SGW.
 		\item Quando il terminale viene localizzato, viene creato un bearer S1 e il pacchetto viene inviato all'UE.
 		In questo caso l'operazione viene gestita dal MME, instaurando anche un radio bearer tra UE e eNodeB.
@@ -124,7 +124,7 @@ Quando un pacchetto destinato a un UE arriva al PGW, ci sono due possibilità:
 \section{Servizi a commutazione di circuito in LTE}
 Questo tipo di servizi (ad esempio chiamate vocali) non sono più supportati in LTE.
 Gli UE multi-standard possono essere registrati simultaneamente su core networks eterogenee.
-A questo scopo, una nuova interfaccia (SG interface) è stata definita tra MME e MSC. Questa interfaccia facilità il fallback per chiamate vocali.
+A questo scopo, una nuova interfaccia (SG interface) è stata definita tra MME e MSC. Questa interfaccia facilita il fallback per chiamate vocali.
 \subsection{Fallback chiamate vocali}
 LTE permette solo chiamate tramite VoLTE (VoIP), ma le chiamate su reti a commutazione di circuito sono ancora possibili tramite la procedura di fallback.
 Un UE viene informato di una chiamata in arrivo da una rete a commutazione di circuito tramite il paging LTE, dopodiché esegue la chiamata usando la rete 2G/3G.

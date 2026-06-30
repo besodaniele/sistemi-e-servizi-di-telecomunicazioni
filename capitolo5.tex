@@ -118,7 +118,7 @@ Ovviamente $b < p$.
 \subsubsection{Traffico bursty}
 Il serbatoio di credito permette al traffico generato dalla sorgente di essere ammesso nella rete a una velocità maggiore del token rate $r$ (peak rate $p$).
 Assumiamo che $p >> r$ e che il traffico generato dalla sorgente sia bursty, ovvero abbia periodi di alta attività seguiti da periodi di bassa attività.
-Il token bucker preserva la burstiness del traffico.
+Il token bucket preserva la burstiness del traffico.
 Il regolatore controlla la lunghezza massima del burst $L$, calcolata come $L=\frac{k}{p-r}$.
 L'average rate $b$ viene indirettamente controllato modificando $L$ (che dipende da $K$ e $r$).
 \subsubsection{Funzione di restrizione}
@@ -224,7 +224,7 @@ N_{\text{DLB}} > N_p
 \]
 Questo significa che il DLB rende possibile multiplexare più flussi senza perdite rispetto a una strategia di peak allocation.
 \section{Scheduling}
-Le tecniche di scheduling permettono di partizionare le interfacce di usicta del router tra i vari flussi di traffico.
+Le tecniche di scheduling permettono di partizionare le interfacce di uscita del router tra i vari flussi di traffico.
 La banda è condivisa tra i pacchetti in diverse code. Uno scheduler determina come la banda viene partizionata.
 Vi sono diversi possibili approcci.
 \subsection{Time division multiplexing}

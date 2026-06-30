@@ -22,7 +22,7 @@ Analizziamo le componenti principali di una rete di accesso fissa:
 \begin{itemize}
 	\item \textbf{Distribution box (punto di distribuzione)}: presente nell'edificio, tipicamente in cantina.
 	Permette di non collegare direttamente ogni doppino al distribution point.
-	\item \textbf{Distribution point (ripartitore)}: permutatore presente in un cabinetto in strada. Effettua delle permutazioni fisiche connettendo i doppini che provengono da segmenti diversi tramite jumpers.
+	\item \textbf{Distribution point (ripartitore)}: permutatore presente in un cabinet in strada. Effettua delle permutazioni fisiche connettendo i doppini che provengono da segmenti diversi tramite jumpers.
 	Tipicamente, non vi sono più di due ripartitori tra l'utente e la centrale. Inoltre è possibile avere connessioni dirette tra centrale e utente, senza passare per un ripartitore, ma ciò è meno comune.
 	\item \textbf{Main distribution Frame (permutatore)}: permutatore che permette di interfacciarsi con la rete a banda larga.
 	\item \textbf{DSLAM (DSL access multiplexer)}: seleziona la porzione di banda da dedicare alla comunicazione (commutazione di pacchetto) e la comunica al router IP.
@@ -38,7 +38,7 @@ Inoltre, la qualità dei ripartitori ha un forte impatto sulla qualità del serv
 L'utilizzo di questa tecnologia è a basso costo, in quanto sfrutta infrastrutture già esistenti per la rete telefonica (con l'aggiunta di specifici apparati per utenti e centrali).
 Vengono inoltre utilizzate per le tecnologia \textbf{xDSL} (Digital Subscriber Line).
 \subsection{xDSL}
-L'idea alla base delle tecnologie xDSL è quella di utilizzare la maggiorparte della banda disponibile su doppini già presenti.
+L'idea alla base delle tecnologie xDSL è quella di utilizzare la maggior parte della banda disponibile su doppini già presenti.
 Ovviamente, c'è un trade-off tra banda disponibile e distanza massima raggiungibile, poiché la banda utilizzabile è limitata dalle caratteristiche del mezzo trasmissivo.
 Forme più ''aggressive'' di xDSL utilizzano bande più ampie, ma ciò comporta una riduzione della distanza massima raggiungibile.
 Negli acronimi la prima lettera ''A'' sta per ''Asymmetric'', mentre la lettera ''V'' sta per ''Very high bit rate''.
@@ -151,8 +151,7 @@ Il vectoring presenta due limitazioni principali:
 \section{Reti fibra misto rame}
 Come già accennato, c'è un trade-off tra banda disponibile e distanza massima raggiungibile, poiché la banda utilizzabile è limitata dalle caratteristiche del mezzo trasmissivo.
 I cavi in fibra ottica offrono una banda molto più ampia rispetto ai cavi in rame, ma sono più costosi da installare e mantenere.
-Per questo motivo, una soluzione comune è quella di utilizzare una rete fibra misto rame (Fiber to the X, FTTX), i
-in cui la fibra ottica viene utilizzata fino a un certo punto della rete, e poi si utilizza il rame per raggiungere l'utente finale.
+Per questo motivo, una soluzione comune è quella di utilizzare una rete fibra misto rame (Fiber to the X, FTTX), in cui la fibra ottica viene utilizzata fino a un certo punto della rete, e poi si utilizza il rame per raggiungere l'utente finale.
 Le varie soluzioni FTTX si differenziano in base a dove termina la fibra ottica.
 \subsection{Fiber to the exchange (FTTE)}
 In questa soluzione, la fibra ottica termina presso la centrale telefonica (exchange), e il rame viene utilizzato per collegare la centrale agli utenti finali.

@@ -140,7 +140,7 @@ I middlebox sono dispositivi che offrono particolari capacità sia al livello di
 	\end{itemize}
 \end{itemize}
 \subsection{Firewall}
-Dispositivo di sicurezza inline che implementa una resie di regole sul traffico di rete, con comportamento di default di negare tutto il traffico che non matcha con nessuna regola.
+Dispositivo di sicurezza inline che implementa una serie di regole sul traffico di rete, con comportamento di default di negare tutto il traffico che non matcha con nessuna regola.
 Le regole vengono eseguite in sequenza.
 I firewall sono device stateful quindi possono tenere traccia dello stato del sistema per prendere decisioni più informate, ad esempio possono tenere traccia delle connessioni attive e permettere solo pacchetti che fanno parte di connessioni già stabilite.
 Dato che sono dispositivi inline, è richiesto un alto livello prestazionale per operazioni sul data plane.
@@ -224,11 +224,11 @@ Il traffico viene inoltrato al IDS, questo perché l'esecuzione delle operazioni
 Un attacco DDoS (Distributed Denial of Service) è un attacco informatico in cui un aggressore cerca di rendere un servizio o una risorsa indisponibile sovraccaricando il sistema con un flusso di traffico eccessivo o con richieste malformate.
 Ci sono due tipi principali di sistemi anti-DDoS:
 \begin{itemize}
-	\item \textbf{ISP based}: Offerto nativametne dall'ISP (tendenzialmente a pagamento) e implementato direttamente nei router dell'ISP.
+	\item \textbf{ISP based}: Offerto nativamente dall'ISP (tendenzialmente a pagamento) e implementato direttamente nei router dell'ISP.
 	\item \textbf{Cloud based}: Tutto il traffico viene inoltrato al provider che offre il servizio e pulito.
 \end{itemize}
 \subsection{Load balancer}
-Il problema del load balancine sorge nel momento in cui il traffico da molti utenti verso un server deve essere gestito.
+Il problema del load balancing sorge nel momento in cui il traffico da molti utenti verso un server deve essere gestito.
 Ci sono tre possibilità:
 \begin{itemize}
 	\item \textbf{Soluzioni network-based}, caching, CDN, DNS load balancing, ecc.
@@ -296,7 +296,7 @@ Quindi per ricapitolare:
 \end{itemize}
 \subsection{Tipi di configurazioni}
 \begin{itemize}
-	\item \textbf{Proattiva}: le tabelle di flusso sono sompletamente configurate da OpenFlow all'avvio dello switch. Tutte le entrate sono statiche e non sono modificabili a runtime.
+	\item \textbf{Proattiva}: le tabelle di flusso sono solitamente configurate da OpenFlow all'avvio dello switch. Tutte le entrate sono statiche e non sono modificabili a runtime.
 	\item \textbf{Reattiva}: le tabelle di flusso sono configurate a runtime (sono vuote allo startup).
 	Se un pacchetto arriva e non appartiene a nessun flusso, viene inoltrato al controller (packet-in message) che decide come gestirlo e installa una nuova regola di flusso.
 \end{itemize}

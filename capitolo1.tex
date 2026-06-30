@@ -270,7 +270,7 @@ Questo sistema viene tipicamente utilizzato in sistemi radio, TV e nelle dorsali
 \subsection{Orthogoal Frequency Division Multiplexing (OFDM)}
 Il segnale da trasmettere viene diviso in uno grande numero di sotto-carrier indipendenti a bitrate più basso.
 I sotto-carrier sono ortogonali tra loro, cioè la loro frequenza è multipla intera di una frequenza fondamentale, in modo da evitare interferenze reciproche.
-La trasmissione avviene così in parallelo su più sotto-carrier. L'OFDM è robusto e offre una buona qualità anche nel caso ci siano dei sotto carriere con moltre interferenze o attenuazione elevata.
+La trasmissione avviene così in parallelo su più sotto-carrier. L'OFDM è robusto e offre una buona qualità anche nel caso ci siano dei sotto carrier con molte interferenze o attenuazione elevata.
 Viene molto utilizzata nel contesto delle trasmissioni wireless (Wi-Fi, 4G, 5G) e nelle comunicazioni su cavo (ADSL), nella quale prende il nome di DMT (Discrete Multi-Tone).
 
 \begin{figure}[H]
@@ -295,7 +295,7 @@ Viene molto utilizzata nel contesto delle trasmissioni wireless (Wi-Fi, 4G, 5G) 
 \end{figure}
 \subsection{Synchronous Time Division Multiplexing (TDM)}
 Il tempo viene diviso in slot periodici, e ogni slot è assegnato a un flusso informativo specifico. Se un flusso non ha dati da trasmettere durante il suo slot, lo slot rimane vuoto (inefficienza).
-Il periodo in cui è permesso trasmettere è detto \textbf{time slot}, mentre la struttura perioda che contiene gli slot di ogni sorgente è detta \textbf{frame}.
+Il periodo in cui è permesso trasmettere è detto \textbf{time slot}, mentre la struttura periodica che contiene gli slot di ogni sorgente è detta \textbf{frame}.
 È necessaria l'informazione di quando inizia ogni frame, in modo da sincronizzare trasmissione e ricezione.
 
 \begin{figure}[H]
@@ -635,7 +635,7 @@ Come mostrato in figura \ref{fig:optic}, ci sono più tipi di fibre ottiche, che
 I mezzi radio utilizzano onde elettromagnetiche per trasmettere segnali attraverso l'aria. 
 Ci sono diverse applicazioni dei mezzi radio, tra cui:
 \begin{itemize}
-	\item \textbf{Wirelless Local Area Networks (WLAN) e Fixed Wireless Access (FWA)}: 
+	\item \textbf{Wireless Local Area Networks (WLAN) e Fixed Wireless Access (FWA)}: 
 	\begin{itemize}
 		\item utilizzano frequenze come 2.4 GHz e 5 GHz (bande libere).
 		\item Soffrono di interferenze da altri dispositivi che utilizzano le stesse frequenze (e.g., microonde, Bluetooth).
@@ -729,7 +729,7 @@ Di conseguenza più antenne sono necessarie per coprire la stessa area a frequen
 \subsubsection{Multiplexing e accesso multiplo nei mezzi radio}
 Nella direzione di downlink viene utilizzato il multiplexing, dove ho una stazione di trasmissione e diversi riceventi.
 Nella direzione di uplink viene utilizzato l'accesso multiplo, dove ho diverse stazioni di trasmissione e una stazione di ricezione (nodo di accesso o base station).
-Se voglio separare downlink e upling sullo stesso medium di trasmissione, posso utilizzare tecniche di duplexing:
+Se voglio separare downlink e uplink sullo stesso medium di trasmissione, posso utilizzare tecniche di duplexing:
 \begin{itemize}
 	\item \textbf{Frequency Division Duplexing (FDD)}: utilizzo frequenze diverse per downlink e uplink (come FDM).
 	\item \textbf{Time Division Duplexing (TDD)}: utilizzo lo stesso canale ma in momenti diversi per downlink e uplink (come TDM).

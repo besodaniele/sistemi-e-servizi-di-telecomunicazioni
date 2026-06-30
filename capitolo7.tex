@@ -1,6 +1,6 @@
 I contenuti multimediali sono diffusi su Internet tramite il World Wide Web, un servizio Internet semplice ed efficace che usa protocolli di livello applicativo.
 \\
-Fin dalle origini del Web, l'approccio tipico e stato l'uso di server centralizzati (origin server) nella rete backbone. Questo comporta un problema importante: i client che accedono allo stesso contenuto generano un carico molto elevato sui server e sulla rete, soprattutto con il forte aumento del traffico Internet nell'ultimo decennio.
+Fin dalle origini del Web, l'approccio tipico è stato l'uso di server centralizzati (origin server) nella rete backbone. Questo comporta un problema importante: i client che accedono allo stesso contenuto generano un carico molto elevato sui server e sulla rete, soprattutto con il forte aumento del traffico Internet nell'ultimo decennio.
 \\
 Questo carico può essere ridistribuito meglio usando strategie e dispositivi specificamente progettati per gestire l'aumento di traffico. Inoltre, tali strategie permettono di ottenere latenze ridotte e un uso piu efficiente delle risorse.
 \begin{figure}[H]
@@ -78,7 +78,7 @@ Gli accessi ai contenuti mostrano spesso correlazione di localita, sfruttata dal
 \end{itemize}
 
 \section{Il problema della consistenza}
-La \textbf{consistenza} e la proprieta che garantisce l'allineamento delle repliche: in linea di principio, la stessa versione del contenuto dovrebbe essere presente in tutti i replica server.
+La \textbf{consistenza} è la proprietà che garantisce l'allineamento delle repliche: in linea di principio, la stessa versione del contenuto dovrebbe essere presente in tutti i replica server.
 \\
 Esistono due gradi di consistenza:
 \begin{itemize}
@@ -88,14 +88,14 @@ Esistono due gradi di consistenza:
 Per garantire consistenza si usano tre meccanismi:
 \begin{itemize}
 	\item \textbf{Invalidation}: le repliche sono invalidate dopo la scadenza del \emph{tempo di scadenza atteso} definito dall'origin server.
-	\item \textbf{Freshness}: garantisce che una replica possa essere considerata \emph{fresca} (non obsoleta); serve perche un contenuto puo cambiare anche prima del tempo di scadenza atteso.
+	\item \textbf{Freshness}: garantisce che una replica possa essere considerata \emph{fresca} (non obsoleta); serve perché un contenuto può cambiare anche prima del tempo di scadenza atteso.
 	\item \textbf{Validation}: verifica se una replica è ancora valida anche dopo la scadenza del tempo atteso.
 \end{itemize}
 
 \section{Cooperative caching}
 \raggedcolumns
 \begin{multicols}{2}
-Quando una cache non contiene un contenuto richiesto (\emph{cache miss}), puo richiederlo ad altre cache invece che all'origin server.
+Quando una cache non contiene un contenuto richiesto (\emph{cache miss}), può richiederlo ad altre cache invece che all'origin server.
 \\
 Esistono due tipi di cooperative caching:
 \begin{itemize}
@@ -159,7 +159,7 @@ Se il contenuto non e in cache, la cache risponde con l'errore \texttt{504 Gatew
 
 \section{Direttive HTTP per il ciclo di vita del contenuto}
 \begin{itemize}
-	\item \texttt{Date}: istante in cui il contenuto e stato inviato dall'origin server alla cache.
+	\item \texttt{Date}: istante in cui il contenuto è stato inviato dall'origin server alla cache.
 	\item \texttt{Last-modified}: ultimo istante di modifica del contenuto da parte dell'origin server.
 	\item \texttt{Age}: tempo trascorso dall'oggetto in cache.
 	\item \texttt{Expires}: previsione del server su quando le copie devono essere sostituite (tempo di scadenza atteso).
@@ -191,11 +191,11 @@ I client possono richiedere contenuti con requisiti temporali.
 Per impostazione predefinita, le cache non restituiscono contenuti obsoleti (\texttt{Max-stale} non specificato).
 
 \subsection{Tempo di scadenza previsto dal server}
-Il valore indicato in \texttt{Expires} e una previsione dell'origin server e può essere errata.
+Il valore indicato in \texttt{Expires} è una previsione dell'origin server e può essere errata.
 \\
 Se è possibile garantire che l'origin server non modifichi un oggetto prima del tempo di scadenza atteso, si ottiene consistenza forte.
 \\
-Il meccanismo di validazione viene usato quando il tempo di scadenza atteso e raggiunto.
+Il meccanismo di validazione viene usato quando il tempo di scadenza atteso è raggiunto.
 
 \section{Validazione dal lato client}
 Il client cerca una replica valida del contenuto.
@@ -244,12 +244,12 @@ Esistono contenuti eterogenei:
 \end{itemize}
 
 \subsection{Quali contenuti replicare}
-Una parte significativa dei contenuti Internet (oltre il 50\%) e \emph{non cachabile}.
+Una parte significativa dei contenuti Internet (oltre il 50\%) è \emph{non cachabile}.
 \\
 Cause principali della non-cachabilita:
 \begin{itemize}
-	\item \textbf{Volatilita}: variazioni frequenti nel tempo rendono costoso allineare le repliche.
-	\item \textbf{Dinamicita}: le cache in genere non sono progettate per generare contenuti dinamici.
+	\item \textbf{Volatilità}: variazioni frequenti nel tempo rendono costoso allineare le repliche.
+	\item \textbf{Dinamicità}: le cache in genere non sono progettate per generare contenuti dinamici.
 	\item \textbf{Cifratura}: i dati cifrati non sono cachabili.
 	\item \textbf{Advertising/Analytics}: ad esempio, il proprietario di un banner vuole tracciare il numero di click.
 \end{itemize}
@@ -299,7 +299,7 @@ Componenti di content delivery:
 		\item Esegue analisi del traffico.
 		\item Consente ai Content Provider di addebitare gli utenti.
 		\item Si interfaccia con i sistemi di billing dei Content Provider.
-		\item Puo essere consultato (previa autenticazione) da più Content Provider.
+		\item Può essere consultato (previa autenticazione) da più Content Provider.
 	\end{itemize}
 \end{itemize}
 \begin{figure}[H]
