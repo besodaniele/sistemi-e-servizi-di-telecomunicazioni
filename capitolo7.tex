@@ -2,7 +2,7 @@ I contenuti multimediali sono diffusi su Internet tramite il World Wide Web, un 
 \\
 Fin dalle origini del Web, l'approccio tipico è stato l'uso di server centralizzati (origin server) nella rete backbone. Questo comporta un problema importante: i client che accedono allo stesso contenuto generano un carico molto elevato sui server e sulla rete, soprattutto con il forte aumento del traffico Internet nell'ultimo decennio.
 \\
-Questo carico può essere ridistribuito meglio usando strategie e dispositivi specificamente progettati per gestire l'aumento di traffico. Inoltre, tali strategie permettono di ottenere latenze ridotte e un uso piu efficiente delle risorse.
+Questo carico può essere ridistribuito meglio usando strategie e dispositivi specificamente progettati per gestire l'aumento di traffico. Inoltre, tali strategie permettono di ottenere latenze ridotte e un uso più efficiente delle risorse.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{pictures/7/rete.png}
@@ -11,7 +11,7 @@ Questo carico può essere ridistribuito meglio usando strategie e dispositivi sp
 \section{Uso dei proxy}
 Un \textbf{proxy} è un dispositivo di livello applicativo che replica contenuti e si colloca tra client e origin server. In questo modo, la distribuzione dei contenuti migliora.
 \\
-Le principali possibilita sono due:
+Le principali possibilità sono due:
 \begin{itemize}
 	\item adozione di \textbf{reverse proxy};
 	\item adozione di \textbf{forward proxy}.
@@ -70,11 +70,11 @@ Dove spesso una quota ridotta dei contenuti genera la maggior parte degli access
 	\includegraphics[width=\textwidth]{pictures/7/popolarità.png}
 	\caption{Esempio di distribuzione della popolarità dei contenuti secondo la funzione di Zipf.}
 \end{figure}
-\subsection{Localita degli accessi}
-Gli accessi ai contenuti mostrano spesso correlazione di localita, sfruttata dal caching:
+\subsection{Località degli accessi}
+Gli accessi ai contenuti mostrano spesso correlazione di località, sfruttata dal caching:
 \begin{itemize}
-	\item \textbf{Localita temporale}: un contenuto acceduto in un certo istante è probabilmente acceduto di nuovo dopo poco tempo.
-	\item \textbf{Localita spaziale}: un contenuto acceduto in un'area geografica è probabile che venga acceduto anche in aree geografiche vicine.
+	\item \textbf{Località temporale}: un contenuto acceduto in un certo istante è probabilmente acceduto di nuovo dopo poco tempo.
+	\item \textbf{Località spaziale}: un contenuto acceduto in un'area geografica è probabile che venga acceduto anche in aree geografiche vicine.
 \end{itemize}
 
 \section{Il problema della consistenza}
