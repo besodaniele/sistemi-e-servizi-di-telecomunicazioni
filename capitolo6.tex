@@ -1,7 +1,7 @@
 Il voice over IP è un metodo per gestire le chiamate telefoniche su internet, invece che utilizzare la rete telefonica tradizionale. In questo modo, è possibile effettuare chiamate vocali utilizzando una connessione internet, invece di una linea telefonica dedicata.
-La PTSN (Public Switched Telephone Network) è una rete a commutazione di circuito, mente le rete internet è a commutazione di pacchetto. La PTSN è progettata per gestire le chiamate vocali, mentre la rete internet è progettata per gestire una vasta gamma di dati, tra cui testo, immagini e video.
+La PSTN (Public Switched Telephone Network) è una rete a commutazione di circuito, mente le rete internet è a commutazione di pacchetto. La PSTN è progettata per gestire le chiamate vocali, mentre la rete internet è progettata per gestire una vasta gamma di dati, tra cui testo, immagini e video.
 In VoIP, la voce viene trasmessa interamente in formato digitale (e pacchettizzata).
-Nella rete PTSN la trasmissione analogica della voce avviene nell'ultimo miglio (POTS, plain old telephone service), mentre il resto è digitale.
+Nella rete PSTN la trasmissione analogica della voce avviene nell'ultimo miglio (POTS, plain old telephone service), mentre il resto è digitale.
 Ci sono due tipi di operatori:
 \begin{itemize}
 	\item \textbf{Over the top (OTT)}: forniscono servizi VoIP senza possedere l'infrastruttura di rete sottostante. 
@@ -11,7 +11,7 @@ Ci sono due tipi di operatori:
 Diversi tipi di chiamate VoIP possono essere effettuate:
 \begin{itemize}
 	\item \textbf{VoIP-VoIP}
-	\item \textbf{VoIP-PTSN/PTSN-VoIP}
+	\item \textbf{VoIP-PSTN/PSTN-VoIP}
 	\item \textbf{VoIP-Mobile Radio Network/Mobile Radio Network-VoIP}
 \end{itemize}
 Nel secondo e terzo tipo deve essere garantita la possibilità di interconnessione tra le reti.
@@ -19,23 +19,23 @@ Nel secondo e terzo tipo deve essere garantita la possibilità di interconnessio
 Si divide a sua volta in:
 \begin{itemize}
 	\item \textbf{VoIP puro}: la comunicazione avviene tra due terminali che supportano nativamente VoIP (ad esempio un pc o telefono VoIP).
-	I pacchetti vocali vengono instradati usando internet sull'intero cammino, bypassando la rete PTSN.
+	I pacchetti vocali vengono instradati usando internet sull'intero cammino, bypassando la rete PSTN.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.8\textwidth]{pictures/6/pureVoip.png}
 	\end{figure}
-	\item \textbf{Terminali adattati}: La comunicazione avviene tramite terminali PTSN che sono stati adattati a utilizzare VoIP. I pacchetti vengono instradati usando internet, bypassando la rete PTSN.
+	\item \textbf{Terminali adattati}: La comunicazione avviene tramite terminali PSTN che sono stati adattati a utilizzare VoIP. I pacchetti vengono instradati usando internet, bypassando la rete PSTN.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.8\textwidth]{pictures/6/adaptedVoip.png}
 	\end{figure}
 \end{itemize}
-\subsection{VoIP-PTSN}
-La comunicazione avviene tra un terminale VoIP e un terminale PTSN.
-I pacchetti vocali vengono instradati usando internet solo in parte del cammino, mentre il resto del cammino utilizza la rete PTSN.
+\subsection{VoIP-PSTN}
+La comunicazione avviene tra un terminale VoIP e un terminale PSTN.
+I pacchetti vocali vengono instradati usando internet solo in parte del cammino, mentre il resto del cammino utilizza la rete PSTN.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/6/voipptsn.png}
+	\includegraphics[width=0.8\textwidth]{pictures/6/voipPSTN.png}
 \end{figure}
 \subsection{VoIP-Mobile Radio Network}
 La comunicazione avviene tra un terminale VoIP e un terminale mobile.
@@ -319,7 +319,7 @@ Questo rende i messaggi facilmente leggibili.
 \end{figure}
 Il formato dei campi dell'header sono del tipo \texttt{parametro:valore}.
 \subsection{Elementi di rete}
-La rete viene divisa in domini, ognuno di questi include gli elementi rappresentati in figura \ref{fig:elementiReteSIP}.
+La rete viene divisa in domini, ognuno di questi include gli elementi rappresentati in figura.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{pictures/6/elementiReteSIP.png}
